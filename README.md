@@ -11,24 +11,29 @@ Write a program that:
 
 ## Pseudocode
  
-    BEGIN
-    INPUT A
-    INPUT B
-    IF A > B THEN
-        DISPLAY "B is larger"
-    ELSE IF A == B
-        DISPLAY "Both numbers are equal"
-    ELSE
-        DISPLAY "B is larger"
+    START
+
+        INPUT A
+
+        INPUT B
+
+        IF A > B THEN
+            DISPLAY "B is larger"
+        ELSE IF A == B
+            DISPLAY "Both numbers are equal"
+        ELSE
+            DISPLAY "B is larger"
+        ENDIF
+
     END
 
+// ...existing code...
 ## Flowchart
 
 ```mermaid
 flowchart TD
-    A([Start]) --> B[/Input A/]
-    B --> C[/Input B/]
-    C --> D{A > B?}
+    A([Start]) --> P[BEGIN<br/>INPUT A<br/>INPUT B<br/>END]
+    P --> D{A > B?}
     
     D -->|Yes| E[Display "A is larger"]
     D -->|No| F{B > A?}
@@ -39,4 +44,3 @@ flowchart TD
     E --> I([End])
     G --> I([End])
     H --> I([End])
-```
