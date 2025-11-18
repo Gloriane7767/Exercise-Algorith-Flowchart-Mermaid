@@ -35,11 +35,11 @@ flowchart TD
     A([Start]) --> P[BEGIN<br/>INPUT A<br/>INPUT B<br/>END]
     P --> D{A > B?}
     
-    D -->|Yes| E[Display "A is larger"]
+    D -->|Yes| E[Display A is larger]
     D -->|No| F{B > A?}
     
-    F -->|Yes| G[Display "B is larger"]
-    F -->|No| H[Display "Both numbers are equal"]
+    F -->|Yes| G[Display B is larger]
+    F -->|No| H[Display Both numbers are equal]
     
     E --> I([End])
     G --> I([End])
