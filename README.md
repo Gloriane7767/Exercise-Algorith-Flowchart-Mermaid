@@ -12,7 +12,6 @@ Write a program that:
 ## Pseudocode
  
     START
-
         INPUT A
 
         INPUT B
@@ -27,7 +26,6 @@ Write a program that:
 
     END
 
-// ...existing code...
 ## Flowchart
 
 ```mermaid
@@ -43,5 +41,47 @@ flowchart TD
     
     E --> I([End])
     G --> I([End])
+    H --> I([End])
+```
+
+## Exercise 2
+Sum of 5 Numbers ( Loop + Accumulation)
+
+Write pseudocode for a program that:
+- Read 5 numbers one by one
+- calculate theor total sum
+- Display the results
+
+
+## Pseudocode
+
+```text
+START
+    SET sum ← 0
+
+    FOR count ← 1 TO 5 DO
+        DISPLAY "Enter number ", count
+        READ number
+        sum ← sum + number
+    END FOR
+
+    DISPLAY "Total sum = ", sum
+END
+```
+
+## Flowchart
+```mermaid
+flowchart TD
+
+    A([Start]) --> B[Set sum = 0]
+    B --> C[Set count = 1]
+    C --> D{Is count ≤ 5?}
+
+    D -->|Yes| E[Read number]
+    E --> F[sum = sum + number]
+    F --> G[Increase count by 1]
+    G --> D
+
+    D -->|No| H[Display "Total sum = " + sum]
     H --> I([End])
 ```
