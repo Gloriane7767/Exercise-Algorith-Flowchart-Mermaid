@@ -11,38 +11,42 @@ Write a program that:
 
 ## Pseudocode
  
-    START
-        INPUT A
+```text
+START
+    INPUT A
+    INPUT B
 
-        INPUT B
-
-        IF A > B THEN
-            DISPLAY "B is larger"
-        ELSE IF A == B
-            DISPLAY "Both numbers are equal"
-        ELSE
-            DISPLAY "B is larger"
-        ENDIF
-
-    END
+    IF A > B THEN
+        DISPLAY "A is larger"
+    ELSE IF B > A THEN
+        DISPLAY "B is larger"
+    ELSE
+        DISPLAY "Both numbers are equal"
+    ENDIF
+END
+```
 
 ## Flowchart
 
 ```mermaid
 flowchart TD
-    A([Start]) --> P[BEGIN<br/>INPUT A<br/>INPUT B<br/>END]
-    P --> D{A > B?}
+    A([Start]) --> B[INPUT A]
+    B --> C[INPUT B]
+    C --> D{A > B?}
     
     D -->|Yes| E[Display A is larger]
-    D -->|No| F{B > A?}
+    D -->|No| F{A = B?}
     
-    F -->|Yes| G[Display B is larger]
-    F -->|No| H[Display Both numbers are equal]
+    F -->|Yes| G[Display Both numbers are equal]
+    F -->|No| H[Display B is larger]
     
     E --> I([End])
     G --> I([End])
     H --> I([End])
 ```
+
+
+
 
 ## Exercise 2
 Sum of 5 Numbers ( Loop + Accumulation)
