@@ -82,6 +82,7 @@ flowchart TD
     F --> G[Increase count by 1]
     G --> D
 
-    D -->|No| H[Display "Total sum = " + sum]
+    D -->|No| H[Display Total sum = sum]
     H --> I([End])
+```
 ```
