@@ -1,33 +1,26 @@
 # Exercise: Algorithm and flowchart
 
 ## Exercise 1
-
-===
-
 Find the Largest of Two Numbers
 
-**Problem**
 Write a program that:
-
 - Takes two numbers **A** and **B** as input
 - Compare the two numbers
 - Display which number is larger
 - if they are equal, display: **Both numbers are equal**
 
 ## Pseudocode
-
  
-BEGIN
+    BEGIN
     INPUT A
     INPUT B
-
     IF A > B THEN
         DISPLAY "B is larger"
     ELSE IF A == B
         DISPLAY "Both numbers are equal"
     ELSE
         DISPLAY "B is larger"
-END
+    END
 
 ## Flowchart
 
