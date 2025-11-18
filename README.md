@@ -45,9 +45,6 @@ flowchart TD
     H --> I([End])
 ```
 
-
-
-
 ## Exercise 2
 Sum of 5 Numbers ( Loop + Accumulation)
 
@@ -87,6 +84,39 @@ flowchart TD
     G --> D
 
     D -->|No| H[Display Total sum = sum]
+    H --> I([End])
+```
+```
+
+## Exercise 3
+A program asks the user to enter their age:
+- If the age is 18 or older, display the message "You are eligible to vote"
+- If the age is less than 18, display the message "You are not eligible to vote"
+- Then end the program.
+
+
+## Pseudocode
+
+```text
+START
+    INPUT AGE
+
+    IF A >= 18 THEN
+        DISPLAY "You are eligible to vote"
+    ELSE "You are  not eligible to vote"
+    ENDIF
+END
+```
+
+## Flowchart
+```mermaid
+flowchart TD
+
+    A([Start]) --> B[Set AGE = 18]
+    B --> C[IS AGE >=18]
+
+    D -->|Yes| E[You are eligible to vote]
+    E --> F[ You are not eligible to vote]
     H --> I([End])
 ```
 ```
