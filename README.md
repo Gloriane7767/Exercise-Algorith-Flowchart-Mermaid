@@ -122,3 +122,51 @@ flowchart TD
     D --> F([End])
     E --> F([End])
 ```
+Exercise 4
+A program takes  a student´smarks (out of 100) as input:
+-  if marks are 90 display "Grade A"
+-  if marks are between 75 and 89 display "Grade B"
+-   if marks are between 50 and 74, display "Grade C"
+- if marks are below "50", display "Fail" End the program. 
+
+```text
+BEGIN
+    DISPLAY "Enter student marks (0 - 100):"
+    READ marks
+
+    IF marks >= 90 THEN
+        DISPLAY "Grade A"
+
+    ELSE IF marks >= 75 AND marks <= 89 THEN
+        DISPLAY "Grade B"
+
+    ELSE IF marks >= 50 AND marks <= 74 THEN
+        DISPLAY "Grade C"
+
+    ELSE
+        DISPLAY "Fail"
+    END IF
+
+END
+```
+
+```mermaid
+flowchart TD
+
+    A([Start]) --> B[Read marks]
+
+    B --> C{marks >= 90?}
+    C -->|Yes| D[Display "Grade A"]
+    C -->|No| E{marks >= 75?}
+
+    E -->|Yes| F[Display "Grade B"]
+    E -->|No| G{marks >= 50?}
+
+    G -->|Yes| H[Display "Grade C"]
+    G -->|No| I[Display "Fail"]
+
+    D --> J([End])
+    F --> J
+    H --> J
+    I --> J
+```
