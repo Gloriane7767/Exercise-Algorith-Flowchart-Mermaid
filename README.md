@@ -122,17 +122,12 @@ flowchart TD
     D --> F([End])
     E --> F([End])
 ```
-## Exercise 4
-Student Grade Calculator
-
-Write a program that:
-- Takes a student's marks (out of 100) as input
-- If marks are 90 or above, display "Grade A"
-- If marks are between 75 and 89, display "Grade B"
-- If marks are between 50 and 74, display "Grade C"
-- If marks are below 50, display "Fail"
-
-## Pseudocode 
+Exercise 4
+A program takes  a student´smarks (out of 100) as input:
+-  if marks are 90 display "Grade A"
+-  if marks are between 75 and 89 display "Grade B"
+-   if marks are between 50 and 74, display "Grade C"
+- if marks are below "50", display "Fail" End the program. 
 
 ```text
 BEGIN
@@ -155,12 +150,10 @@ BEGIN
 END
 ```
 
-## Flowchart
-
 ```mermaid
 flowchart TD
 
-    A([Start]) --> B[INPUT marks]
+    A([Start]) --> B[Read marks]
 
     B --> C{marks >= 90?}
     C -->|Yes| D[Display "Grade A"]
