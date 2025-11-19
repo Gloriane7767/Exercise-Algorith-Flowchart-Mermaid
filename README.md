@@ -173,48 +173,46 @@ flowchart TD
 ```
 
 ## Exercise 5
-A program takes three numbers (A, B, C ) as input:
-- Dtermine which number is the largest
+Find the Largest of Three Numbers
+
+Write a program that:
+- Takes three numbers (A, B, C) as input
+- Determine which number is the largest
 - Display the largest number
-- End the program
+
+## Pseudocode
 
 ```text
 START
-    DISPLAY "Enter number A:"
-    READ A
-
-    DISPLAY "Enter number B:"
-    READ B
-
-    DISPLAY "Enter number C:"
-    READ C
+    INPUT A
+    INPUT B
+    INPUT C
 
     IF A >= B AND A >= C THEN
-        DISPLAY "Largest number is A =", 
-
+        DISPLAY "Largest number is A =", A
     ELSE IF B >= A AND B >= C THEN
         DISPLAY "Largest number is B =", B
-
     ELSE
         DISPLAY "Largest number is C =", C
-    END IF
-
+    ENDIF
 END
 ```
+
+## Flowchart
+
 ```mermaid
 flowchart TD
-
-    A([Start]) --> B[Read A]
-    B --> C[Read B]
-    C --> D[Read C]
-
+    A([Start]) --> B[INPUT A]
+    B --> C[INPUT B]
+    C --> D[INPUT C]
+    
     D --> E{A >= B AND A >= C?}
-    E -->|Yes| F[Display "A is the largest"]
+    E -->|Yes| F[Display A is the largest]
     E -->|No| G{B >= A AND B >= C?}
-
-    G -->|Yes| H[Display "B is the largest"]
-    G -->|No| I[Display "C is the largest"]
-
+    
+    G -->|Yes| H[Display B is the largest]
+    G -->|No| I[Display C is the largest]
+    
     F --> J([End])
     H --> J
     I --> J
