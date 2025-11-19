@@ -86,14 +86,14 @@ flowchart TD
     D -->|No| H[Display Total sum = sum]
     H --> I([End])
 ```
-```
 
 ## Exercise 3
-A program asks the user to enter their age:
-- If the age is 18 or older, display the message "You are eligible to vote"
-- If the age is less than 18, display the message "You are not eligible to vote"
-- Then end the program.
+Voting Eligibility Check
 
+Write a program that:
+- Takes the user's age as input
+- If the age is 18 or older, display "You are eligible to vote"
+- If the age is less than 18, display "You are not eligible to vote"
 
 ## Pseudocode
 
@@ -101,22 +101,24 @@ A program asks the user to enter their age:
 START
     INPUT AGE
 
-    IF A >= 18 THEN
+    IF AGE >= 18 THEN
         DISPLAY "You are eligible to vote"
-    ELSE "You are  not eligible to vote"
+    ELSE
+        DISPLAY "You are not eligible to vote"
     ENDIF
 END
 ```
 
 ## Flowchart
+
 ```mermaid
 flowchart TD
-
-    A([Start]) --> B[Set AGE = 18]
-    B --> C[IS AGE >=18]
-
-    D -->|Yes| E[You are eligible to vote]
-    E --> F[ You are not eligible to vote]
-    H --> I([End])
-```
+    A([Start]) --> B[INPUT AGE]
+    B --> C{AGE >= 18?}
+    
+    C -->|Yes| D[Display You are eligible to vote]
+    C -->|No| E[Display You are not eligible to vote]
+    
+    D --> F([End])
+    E --> F([End])
 ```
