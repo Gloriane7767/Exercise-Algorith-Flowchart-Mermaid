@@ -171,3 +171,51 @@ flowchart TD
     H --> J
     I --> J
 ```
+
+## Exercise 5
+A program takes three numbers (A, B, C ) as input:
+- Dtermine which number is the largest
+- Display the largest number
+- End the program
+
+```text
+START
+    DISPLAY "Enter number A:"
+    READ A
+
+    DISPLAY "Enter number B:"
+    READ B
+
+    DISPLAY "Enter number C:"
+    READ C
+
+    IF A >= B AND A >= C THEN
+        DISPLAY "Largest number is A =", 
+
+    ELSE IF B >= A AND B >= C THEN
+        DISPLAY "Largest number is B =", B
+
+    ELSE
+        DISPLAY "Largest number is C =", C
+    END IF
+
+END
+```
+```mermaid
+flowchart TD
+
+    A([Start]) --> B[Read A]
+    B --> C[Read B]
+    C --> D[Read C]
+
+    D --> E{A >= B AND A >= C?}
+    E -->|Yes| F[Display "A is the largest"]
+    E -->|No| G{B >= A AND B >= C?}
+
+    G -->|Yes| H[Display "B is the largest"]
+    G -->|No| I[Display "C is the largest"]
+
+    F --> J([End])
+    H --> J
+    I --> J
+```
